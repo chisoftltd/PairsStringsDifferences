@@ -22,38 +22,42 @@ public class PairsStringsDifferences {
         // TODO code application logic here
 
         String set1, set2; // variable declaration
-
+        int count = 0;
         List<Character> diff = new ArrayList<>();
         Scanner input = new Scanner(System.in); //create Scanner object
+        while (count < 3) {
 
-        System.out.println("Enter first string set:");
-        set1 = input.nextLine();
+            //System.out.println("Enter first string set:");
+            set1 = input.nextLine();
 
-        System.out.println("Enter second string set:");
-        set2 = input.nextLine();
+            //System.out.println("Enter second string set:");
+            set2 = input.nextLine();
 
-        // itreate over the letters in set1
-        for (int i = 0; i < set1.length(); i++) {
-            // itreate over the letters in set2
+            // itreate over the letters in set1
+            for (int i = 0; i < set1.length(); i++) {
+                // itreate over the letters in set2
 
-            //for (int j = 0; j < set2.length(); j++) {
-            char c1 = Character.toLowerCase(set1.charAt(i));
-            char c2 = Character.toLowerCase(set2.charAt(i));
-            // compare char in the two strings
-            if (c1 == c2) {
-                diff.add('.');
-            } else {
-                diff.add('*');
+                //for (int j = 0; j < set2.length(); j++) {
+                char c1 = Character.toLowerCase(set1.charAt(i));
+                char c2 = Character.toLowerCase(set2.charAt(i));
+                // compare char in the two strings
+                if (c1 == c2) {
+                    diff.add('.');
+                } else {
+                    diff.add('*');
+                }
+
+                //}
             }
-
-            //}
+            System.out.println(set1);
+            System.out.println(set2);
+            for (int i = 0; i < diff.size(); i++) {
+                System.out.print(diff.get(i));
+            }
+            count++;
+            System.out.println("");
+            diff.clear();
         }
-        System.out.println(set1);
-        System.out.println(set2);
-        for (int i = 0; i < diff.size(); i++) {
-            System.out.print(diff.get(i));
-        }
-
     }
 
 }
