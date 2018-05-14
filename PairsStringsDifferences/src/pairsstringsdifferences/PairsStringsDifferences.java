@@ -13,7 +13,8 @@ import java.util.Scanner;
  *
  * @author Benjamin Chinwe
  */
-public class PairsStringsDifferences {
+public class PairsStringsDifferences 
+{
 
     /**
      * @param args the command line arguments
